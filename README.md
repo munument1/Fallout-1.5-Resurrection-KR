@@ -73,5 +73,7 @@ https://resurrection.cz/en/
 
 ## 감사의 말
 
+
 훌륭한 모드를 제작한 Fallout 1.5: Resurrection 제작팀에 감사드립니다.
 이 번역 자료가 한국어 사용자들이 Fallout 1.5: Resurrection을 즐기는 데 도움이 되기를 바랍니다.
+추가로 Sfall 제작팀에 감사드립니다. SFall 한글 [소스코드](https://github.com/munument1/Unofficial-KR-Sfall)
