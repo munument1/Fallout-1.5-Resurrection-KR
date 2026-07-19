@@ -35,7 +35,16 @@ Fallout 1.5: Resurrection은 Fallout 2를 기반으로 제작된 대형 팬 모�
 
 5. 같은 이름의 파일이 있을 경우 덮어씁니다.
 
-6. 게임을 실행합니다.
+6. 배포물에는 한글 Sfall `ddraw.dll`, `LangFont.ini`, `fonts` 폴더가 포함되어 있습니다.
+
+7. 기존 `fores.cfg`의 `[system]` 섹션에서 `language` 값만 다음처럼 변경합니다. 다른 설정은 유지하고 파일 전체를 교체하지 마십시오.
+
+   ```ini
+   [system]
+   language=korean
+   ```
+
+8. 게임을 실행합니다.
 
 ## 주의사항
 
