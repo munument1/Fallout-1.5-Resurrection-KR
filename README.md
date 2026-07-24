@@ -10,14 +10,14 @@ Fallout 1.5: Resurrection은 Fallout 2를 기반으로 제작된 대형 팬 모�
 ## 설치 전 준비물
 
 * Fallout 2 본편
-* Fallout 1.5: Resurrection English 1.5 archive 버전
+* [Fallout 1.5: Resurrection English 1.5](https://resurrection.cz/en/download/)
 * 본 한국어 번역 자료
 
 ## 설치 방법
 
 1. Fallout 2 본편을 설치합니다.
 
-2. Fallout 1.5: Resurrection English 1.5 archive 버전을 다운로드합니다.
+2. Fallout 1.5: Resurrection English 1.5를 다운로드합니다.
 
 3. archive 버전의 압축을 Fallout 2 설치 폴더 안에 풀어줍니다.
 
