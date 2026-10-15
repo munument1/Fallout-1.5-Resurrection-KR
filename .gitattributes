@@ -1,0 +1,8 @@
+*.msg -text
+*.bio -text
+*.sve -text
+*.txt -text
+*.ini -text
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
