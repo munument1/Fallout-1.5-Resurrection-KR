@@ -1,0 +1,41 @@
+###################################
+# Alexa, Leonardova prav? ruka #
+# Autor : Ratman #
+###################################
+# Mapa : JIZ.MAP #
+# Prototyp : Alexa #
+# AI packet : Peasant #
+###################################
+
+#Kurzor- hrac postavu zna
+{150}{}{알렉사가 보인다.}
+
+#Dalekohled - hrac postavu zna
+{250}{}{레너드의 오른팔인 알렉사가 보인다.} 
+
+#Texty nad hlavou
+{350}{}{자, 시작하자!} # utok na Juliana
+{351}{}{레너드가 드디어 쉴 수 있겠어, 고마워!} # v Ji?n? ?tvrti
+{352}{}{영감탱이, 당신을 다시 보게 되어 얼마나 기쁜지 모를 거야!} # :)
+{353}{}{잘했어! 이리 와, 보상을 받을 자격이 충분해.} # Pokud po boji v Ji?n? ?tvrti stoj? hr?? moc daleko, vyzve ho, aby za n? pøi?el, jinak dialog odstartuje automaticky
+
+#Texty nad hlavou  - bojov?
+{400}{}{자, 여기 있다, 이 자식아!} # Julian zhebne, jde pøes Julian?v ?asova?.
+{401}{}{오, 젠장!} # M? nakraj??ku
+{402}{}{이 배신자 자식!} # hr??ova ?mysln? støelba na vlastn? MU?
+{403}{}{이 배신자 자식!} # hr??ova ?mysln? støelba na vlastn? ?ENA
+
+#NODE 500 
+{500}{}{잘했네, 친구. 우리와 이 마을을 위해 큰일을 해줬어. 그 자식이 없어졌으니, 다시 삶이 좋아질 거고 도시도 곧 활기를 되찾겠지. 어떻게 감사를 표해야 할지 모르겠지만, 자넨 언제나 환영일세. 술집에 가서 내 앞으로 달아놓고 마시게! 다시 한번 고맙네.} # Reply < Player.Male >   mu? ? pokud zabil Juliana z vlastn? iniciativy, pit? v baru zdarma.
+{501}{}{잘했네, 친구. 우리와 이 마을을 위해 큰일을 해줬어. 그 자식이 없어졌으니, 다시 삶이 좋아질 거고 도시도 곧 활기를 되찾겠지. 어떻게 감사를 표해야 할지 모르겠지만, 자넨 언제나 환영일세. 술집에 가서 내 앞으로 달아놓고 마시게! 다시 한번 고맙네.}  # Reply < Player.Female > ?ena ? pokud zabil Juliana z vlastn? iniciativy, pit? v baru zdarma.
+{502}{}{자네가 대단한 인물이라는 걸 단번에 알아봤지, 훌륭하군! 여기 보상이네, 잘 쓰게나. 이 도시에 큰 공을 세웠어, 고맙네. 아, 그리고 한 가지 더. 술집에 가면 내가 보냈다고 말하게. 원하는 건 뭐든 마셔도 좋아.} # Reply < Player.Male >  mu?- po spln?n? ?kolu ?.3 + hr?? dostane odm?nu za ?kol ?.3 + EXP ? pit? v baru zdarma
+{503}{}{자네가 대단한 인물이라는 걸 단번에 알아봤지, 훌륭하군! 여기 보상이네, 잘 쓰게나. 이 도시에 큰 공을 세웠어, 고맙네. 아, 그리고 한 가지 더. 술집에 가면 내가 보냈다고 말하게. 원하는 건 뭐든 마셔도 좋아.}  # Reply < Player.Female > - po spln?n? ?kolu ?.3 + hr?? dostane odm?nu za ?kol ?.3 + EXP ? pit? v baru zdarma
+{504}{}{오호, 잘했어. 이 아줌마를 기쁘게 해줬군. 여기 맛있는 것 좀 줄 테니 적당히 먹어, 이 썩지 않게 말이야.}  # Reply < Player.Stupid > DEMENT- po spln?n? ?kolu ?.3 + hr?? dostane odm?nu- 3x Mentat, 2x Buffout, 2x Rad Away
+{505}{}{고마워요, 이 돈은 다 써버릴게요.} # < End >  KONEC      pokud to byl quest
+{506}{}{고마워요, 이제 레너드와 대화할 수 있을까요?}  # < Node 4250 >  NODE 4250
+{507}{}{고마워용.} # < End , Player.Stupid >  IN < 4 ; KONEC
+{508}{}{천만에요. 당장 가서 축배를 들어야겠어요!} # < End >  Pokud zabil Jul?u z vlastn? iniciativy
+
+#NODE 550 
+{550}{}{유감스럽지만 그건 불가능할 것 같네. 수년 동안 목숨의 위협을 느끼며 숨어 지내온 터라, 당장은 괜찮아지기 힘들 거야. 시간이 좀 더 필요하네.}  # Reply < >
+{551}{}{아, 그렇군요. 다음에 봬요.} # < End >

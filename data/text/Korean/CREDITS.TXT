@@ -1,0 +1,550 @@
+#.  .  .  .  .  .  .  .  .
+
+#리저렉션 팀
+
+
+Vaclav "Daemon" Panos
+@조직, 게임 디자인, 맵 디자인, 텍스트, 스크립팅
+
+Marek "Maryo" Stipek
+@월드맵 디자인, 스크립팅, 엔진 모딩
+
+Milan "Ratman" Raticak
+@LSGAME.MSG 디자인, 맵 디자인, 텍스트, 스크립팅, 그래픽
+
+Marian "Saruman" Lozi
+@LSGAME.MSG 디자인, 텍스트, 테스팅
+
+ .  .  .
+
+@LSGAME.MSG 디자인
+Daemon
+Ratman
+Saruman
+Seto
+
+@그래픽
+3DfxMan
+Bretan
+Edogie
+Emi
+Geralt
+JaW
+MarkDey
+Matt
+Mirae
+Ratman
+Stefix
+Zahartof
+
+@비디오
+Pito
+
+@음악
+Emitremmus
+
+@월드맵 디자인
+Daemon
+Maryo
+Ratman
+
+@스크립트
+Daemon
+Maryo
+Ratman
+
+@텍스트
+Daemon
+Chekotay
+Harley
+Ratman
+Saruman
+
+@체코어 텍스트 교정
+Sadako
+Viky
+
+@영어 번역
+Martin "Pahars" Bardun
+Bohumil Cambalik
+Lukas Kostovcik
+miky
+Jakub Ondracek
+Michal "meehail" Papak
+Vaclav Pospisil
+Jakub Renner
+Seto
+Ivan Skorvanek
+Milan Tuser
+
+@영어 텍스트 교정
+Blodcyning
+Aaron Campbell
+Michael Jones
+Benjamin Tyrer
+
+@테스트
+Bodkin
+Chekotay
+Flowerpot
+Gordon
+JaW
+Joddy
+Klimaji
+Rajo
+Sadako
+Saruman
+Seto
+Shoggot
+Tom9k
+Valcik
+Yenn
+
+ .  .  .
+
+@감사한 분들
+NovaRain
+Timeslip
+(필수적인 Sfall 제작)
+
+Mash
+(훌륭한 고해상도 패치 제작)
+
+Geras
+Jason
+Josan12
+Lisac2k
+.Pixote.
+x'il
+(새로운 NPC 애니메이션 제작)
+
+Blackened
+Marduk 13
+.Pixote.
+Terbitator
+(새로운 무기 그래픽 제작)
+
+pelicano
+(동료 명령 애드온 제작)
+
+cubik2k
+Jargo
+Dims
+Metaphyzik
+TeamX
+(우리가 사용한 도구 제작)
+
+Fallout2CZ Team
+(오리지널 폴아웃 2 체코어 번역)
+
+JaW
+Toudi_sk
+(체코어 번역 개선 작업)
+
+ .  .  .
+
+@특별 감사
+Black Isle
+Interplay
+
+그리고 폴아웃 1과 2가 탄생할 수 있게 도와준 모든 분들.
+
+ .  .  .
+
+@함께 감사할 분들
+Abe
+Booty
+Bretan
+Comus
+DJ Popelnik
+Erina
+Foman
+Gend
+Mad_Eye
+Mech
+
+그리고 우리가 해낼 수 있을 거라 믿어준 모든 분들.
+
+
+"I'LL NEVER SMILE AGAIN"
+@노래: The Ink Spots
+@작곡: LOWE, RUTH / OSSER, GLENN
+@Universal Music Publishing Group
+
+
+#.  .  .  .  .  .  .  .  .
+
+#폴아웃 2
+
+#프로그래밍
+
+@리드 프로그래머
+Jesse Reynolds
+
+@프로그래머
+Chris Jones
+Nick Kesting
+Robert Hertenstein 2
+Thomas French
+Chris Holland
+Dan Spitzley
+
+@추가 프로그래밍
+Tim Cain
+John Price
+Michael Bernstein
+
+@동영상 기술
+Paul Edelstein
+
+@인스톨러/자동 실행
+Darren Monahan
+
+
+#아트
+
+@리드 아티스트
+Gary Platner
+Tramell Ray Isaac
+
+@아티스트
+Robert Collier
+Jeff McAteer
+Brian Menze
+Scott Rodenhizer
+
+@추가 아트
+Aaron Brown
+Peter Kroko
+Michael Sean McCarthy
+Chad Moore
+Eddie Rainwater
+Justin Sweet
+Vance Kovacs
+Tim Donley
+
+@인턴 아티스트
+Charles M. Gregory
+Daniel Jacobs
+John Jacobs
+Karel Jacobs
+Christopher Jones
+Benc Orpak
+Adoni Torres
+
+@오리지널 게임 아트워크
+Jason Anderson
+Leonard Boyarsky
+Michael Dean
+Sharon Shellman
+
+
+#디자인
+
+@리드 디자이너
+Feargus Urquhart
+Matthew J. Norton
+
+@디자이너
+Jason G. Suinn
+John Deiley
+Chris Avellone
+David "Zeb" Cook
+Dave Hendee
+Colin McComb
+
+@테크니컬 디자이너
+Scott Everts
+
+@레벨 디자이너
+John Deiley
+Scott Everts
+Jason G. Suinn
+
+@추가 디자인
+Robert Hertenstein 2
+Nick Kesting
+Fred Hatch
+
+@디자인/대사
+Mark O'Green
+
+@원작 게임 디자인
+Tim Cain
+Leonard Boyarsky
+Jason Anderson
+Jason Taylor
+Scott Campbell
+
+@SPECIAL 게임 시스템 디자인
+Chris Taylor
+Tim Cain
+Jess Heinig
+Feargus Urquhart
+
+
+#제작
+
+@디비전 디렉터
+Feargus Urquhart
+
+@프로듀서
+Eric Demilt
+Feargus Urquhart
+
+@어시스턴트 프로듀서
+Fred Hatch
+Douglas Avery
+
+@보조 디비전 디렉터
+Jeremy Barnes
+
+@립싱크 코디네이터
+Jason G. Suinn
+Dave Hendee
+
+@립싱크 아티스트
+Douglas Avery
+Chris Benson
+David "Zeb" Cook
+Jacob Devore
+Kenneth Lee
+Colin McComb
+
+
+
+#품질 보증
+
+@품질 보증 디렉터
+Chad Allison
+
+@QA 매니저
+Steve Victory
+Colin Totman
+
+@korean_msg\text\english\dialog\pcover.msg 버전 프로젝트 수퍼바이저
+Greg "Moose" Baumeister
+Steve McLafferty
+Darrell Jones
+
+@korean_msg\text\english\dialog\pcover.msg 버전 선임 테스터
+Dennis Presnell
+Chad Nicholas
+Dave Simon
+
+@korean_msg\text\english\dialog\pcover.msg 버전 테스터
+Ed Hyland
+Dany Martinez
+WR Saunders
+Rodney Smith
+Tony Piccoli
+David Maldonado
+Dan Levin
+Eric Pribish
+Scott Warner
+Derek Johnson
+Tim Anderson
+Primo Pulanco
+Jeremy Ray
+Jeremy Seely
+Henry Lee
+Scott Humphreys
+
+@I.S. 호환성 매니저
+Frank Pimentel
+
+@선임 I.S. 기술자
+Bill Delk
+
+@I.S. 기술자
+Tom Quast
+
+@QA 데이터베이스 관리자
+Steve Cabiness
+
+@호환성 기술자
+Derek Gibbs
+John Parker
+Ed Robles
+Louie Iturzaeta
+
+
+
+#오디오
+
+@오디오 디렉터
+Charles Deenen
+
+@오디오 마스터링
+Craig Duman
+
+@음성 디렉터
+Jamie Thomason
+
+@음성 코디네이터
+Julie Morgavi
+
+@음성 감독
+Chris Borders
+
+@음성 편집
+Frank Szick
+Kevin Frayser
+Ron Valdez
+
+@Marc Graue Studio에서 음성 녹음됨
+
+@사운드 디자인
+Paul Menichini
+Tim Walston
+
+@시네마틱 사운드 디자인
+David Farmer
+
+@시네마틱 재녹음 믹싱
+Charles Deenen
+
+@Interplay Audio에서 Dolby [TM] 서라운드로 믹싱됨
+
+@오디오 관리자
+Gloria Soto
+
+@추가 사운드 디자인:
+Larry Peacock
+Weddington
+EFX
+Eight Ball Sound
+Charles Deenen
+
+@음성 녹음 엔지니어
+Wes Smith
+Julian Cook
+Marc Graue Studios 소속
+
+@작곡:
+Mark Morgan
+@담당:
+Four Bars Intertainment
+@및:
+Rick Jackson
+
+@음성 프로듀서
+Fred Hatch
+
+
+@출연 성우
+
+Charlie Adler
+@해롤드
+
+Ron Perlman
+@나레이터
+
+Dwight Schultz
+@하쿠닌
+
+Jason Marsden
+@마이런
+
+Cree Summer
+@리네트
+
+Kevin Michael Richardson
+@통신 장교
+
+Peter Jason
+@훈련 교관
+
+Peter Jason
+@정문 경비병
+
+Flo DiRe
+@장로
+
+Tress MacNeille
+@탠디
+
+Greg Eagles
+@술릭
+
+Michael Dorn
+@마커스
+
+Michael Dorn
+@프랭크 호리건
+
+Jeffrey Jones
+@대통령
+
+
+
+"A KISS TO BUILD A DREAM ON"
+@Louie Armstrong 연주
+@GRP Records 제공
+@UNIVERSAL MUSIC SPECIAL MARKETS의 라이선스 하에 사용됨
+
+"A KISS TO BUILD A DREAM ON"
+@Bert Kalmer, Harry Ruby, Oscar Hammerstein II 작사/작곡
+@(C) 1935, 1951 (1963, 1979 갱신) METRO GOLDWYN MAYER, INC.
+@EMI CATALOGUE PARTNERSHIP에 권리 양도됨
+@EMI MILLER CATALOG INC.에서 모든 권리를 보유 및 관리함
+@판권 본유. 국제 저작권 보호를 받음.
+@허가 하에 사용됨.
+
+@경고: 연방 저작권법 위반 안내:
+@본 프로그램 및 그 일부를 복제, 복사 또는 재생산하는 행위는
+@저작권자의 명시적인 서면 허가 없이는
+@법적으로 금지되어 있습니다.
+
+
+#VIDEO
+
+@비디오 서비스 제공:
+Dave Cravens
+Stephen Miller
+Bill Stoudt
+Dan Williams
+
+
+#마케팅
+
+@마케팅 디렉터
+Paul Sackman
+
+@마케팅 매니저
+Mike Markin
+Greg Peterson
+
+@보조 마케팅 매니저
+Greg Bauman
+
+@korean_msg\text\english\game\pro_wall.msg 매니저
+Krys Card
+
+@트래픽 매니저
+Thom Dohner
+Paul Naftalis
+
+
+
+
+@감사한 분들
+@(Dave H.) The Unwashed Villagers, the Dyer Family,
+@Jamba Juice, The Tick, Southpark;  (Chris A.) 나의 "친구,"
+@Thuy Dang, Eileen Suh and Ma and Pa Avellone;  (t.ray)
+@korean_msg\text\english\dialog\sjeremy.msg 어머니, 아버지, 아들, 형제 그리고 모든
+@korean_msg\text\english\dialog\ggeoff.msg 이 게임을 구매해 준 나의 열렬한 팬들에게;  (Rob H.)
+@Becky Warner and Billie Ryder;  (Matt N.) Meine
+@DieMonika und der kater;  (Jesse R.) "아버지께,
+@당신은 제 평생의 영감이었습니다. 보고 싶어요
+@언제나."
+
+@특별히 감사한 분들:
+@korean_msg\text\english\dialog\acatheri.msg 폴아웃 및 폴아웃 2 게시판 이용자들.
+@여러분의 의견과 제안, 그리고 다른 해박한 지식들에 감사드립니다!
+@korean_msg\text\english\dialog\acatheri.msg 기대를 뛰어넘는 처리를 해준 Interplay 비디오 룸,
+@korean_msg\text\english\dialog\acatheri.msg 그들의 헌신적인 노력에 감사드립니다!
+
+@Resurrection\FALLOUT2 2는 Interplay Productions에서 제작하였으며,
+@팀 폴아웃 2, 그리고 알파벳 Q와 숫자 42, 20 드림.
+

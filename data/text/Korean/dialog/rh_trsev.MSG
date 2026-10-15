@@ -1,0 +1,26 @@
+###################################
+# Trevor, pod? hr??i z?kladn? informace o Rat Hole #
+# Autor : Harley #
+###################################
+# Mapa :RAT HOLE- JI?N? ?TVR?.MAP #
+# Prototyp : Trevor #
+# AI packet : Pleasant #
+###################################
+
+#Kurzor- hrac postavu zna
+{150}{}{Trevor가 보입니다.}
+
+#Kurzor dalekohled - hrac postavu zna
+{250}{}{Trevor가 보입니다. 그는 주위를 주의 깊게 살피며 경계 중입니다.} 
+
+#Floaty: 
+{300}{}{가서 집안을 수색하고 레오나드를 찾아내! 그놈이 도망치지 못하게 우리가 주변을 봉쇄하겠어.} # V S?
+{301}{}{레오나드를 찾아! 우리 모두 몰려 들어가면 놈은 뒷문으로 달아날 거야.} # V S?
+{302}{}{수색했나? 그럼 줄리안을 찾아가서 보고해. 여긴 대원들이 지키고 있을 테니까.} # V S?
+{303}{}{나 보지 마. 이번 작전의 책임자는 줄리안이야.} # V S?
+{304}{}{수고했어!} # V S?
+{305}{}{제길, 이제 다 망했군. 줄리안이 없으면 우린 끝장이야.} # V S? Julian zhebnul
+
+{350}{}{자, 가자고. 그 새끼들을 아주 박살을 내버리자고!} # V S? Julian zhebnul
+
+{400}{}{네놈에 대한 내 인내심도 이제 바닥났다!} # Hr?? støel? do Trevora

@@ -1,0 +1,57 @@
+###################################
+# Julian, k?po Ji?n? ?tvrti #
+# Autor : Ratman #
+###################################
+# Mapa : SEV.MAP #
+# Prototyp : Julian#
+# AI packet : Peasant #
+###################################
+
+#Kurzor- hrac postavu zna
+{150}{}{줄리안이 보입니다.}
+
+#Dalekohled - hrac postavu zna
+{250}{}{사우스 사이드의 지배자, 줄리안이 보입니다.} 
+
+#Texty
+{350}{}{저 빌어먹을 놈들에게 본때를 보여줘!} #  ?tok proti Alexe, v?, ?e je vrah
+{351}{}{안으로 들어가서 레너드를 잡아와! 여긴 우리가 확보하겠다.} #  pøi ?toku po zji?t?n? vraha marie, kdy je Alexa zabita a ukon?en boj, dokud hr?? nesejde do sklepa, bude nad Juli?novou hlavou tahle hl??ka, bacha podm?nkovat GVAREM QUEST_STAGE1 a leonard search!
+{352}{}{전부 다 고맙네!} #  u? nem? ø?c co jin?ho a odch?z?
+{353}{}{씨발! 알렉사가 아직 살아있잖아, 그녀를 잡아야 해!} #  Alexa zije, pojistka
+
+{400}{}{젠장, 아프군.} #  Bojov?, je hodn? zran?n?
+{401}{}{이 멍청한 새끼가! 내 부하들을 쏘게 놔두지 않겠다!} #  hr?? ?mysln? n?koho tref?. MU?
+{402}{}{이 멍청한 년이! 내 부하들을 쏘게 놔두지 않겠다!} #  ?ENA
+
+#NODE 500  (pokud je Alexa mrtv?, jedno jak, tj. i v r?mci ?kolu!)
+{500}{}{드디어 그년이 죽었군! 도와줘서 고맙다. 자네는 나와 이 마을에 큰 은혜를 베풀었어. 아직 풀리지 않은 수수께끼가 하나 남았는데. 대체 그 개자식 레너드는 어디 있는 거야?!}  # Reply < Player.Male >
+{501}{}{드디어 그년이 죽었군! 도와줘서 고맙다. 자네는 나와 이 마을에 큰 은혜를 베풀었어. 아직 풀리지 않은 수수께끼가 하나 남았는데. 대체 그 개자식 레너드는 어디 있는 거야?!} # Reply < Player.Female >
+{502}{}{모르겠어요, 찾아봐야 할 것 같아요.} # < Node 4100 , GetGlobal GVAR_RH_LEONARD_SEARCH == 0 >  NODE 4100 (neprohledal sklep) ? dokud ho neprohled?, bude furt pøi za??tku rozhovoru (NODE 4050)
+{503}{}{레너드는 죽은 지 꽤 됐습니다. 마리아가 죽고 얼마 안 가 죽었죠. 둘 다 알렉사가 죽였습니다. 그녀는 레너드를 사랑했기에 질투심에 마리아를 죽였고, 레너드는 그녀를 사랑하지 않았기에 죽였습니다. 그러고는 레너드의 이름으로 명령을 내리기 위해 그가 지하실에 숨어있다는 소문을 퍼뜨린 겁니다.}  # < Node 4150 , GetGlobal GVAR_RH_ALEXA_SUICIDE == 1 >  NODE  4150  (pokud Alexa sp?chala sebevra?du a v?echno mu vyklopila)
+{504}{}{레너드는 죽은 지 좀 된 것 같습니다. 알렉사가 그를 죽였어요. 그가 지하실에 숨어있다는 소문은 알렉사가 그의 이름으로 명령을 내리기 위한 구실이었을 뿐입니다.} # < Node 4200 , GetGlobal GVAR_RH_LEONARD_SEARCH == 0 >  NODE 4200 (prohledal i sklep, v? kdo je vrah Marie a julian mu pom?hal se zabit?m Alexy)
+{505}{}{지하실은 완전히 비어 있습니다. 무너진 통로만 있을 뿐이죠. 안타깝지만 레너드는 아마 탈출한 것 같습니다.} # < Node 4250 , GetGlobal GVAR_RH_LEONARD_SEARCH == 1 , GetGlobal GVAR_RH_Q_QUEST_MARIE  == 0 >  NODE 4250  (pokud prohledal sklep a nehled? vraha Marie)
+{506}{}{지하실에는 아무도 없습니다. 이제야 모든 게 이해가 되는군요. 레너드는 죽은 지 꽤 된 것 같습니다. 사실 그는 마리아를 죽이지 않았습니다. 마리아를 죽인 건 알렉사였고, 그 후 곧바로 레너드도 죽였습니다. 그렇게 해서 그가 기어나오길 두려워하며 지하실에 숨어있다는 소문을 퍼뜨리고, 그의 이름으로 지휘권을 잡은 겁니다.} # < Node 4150 , GetGlobal GVAR_RH_LEONARD_SEARCH == 1 , GetGlobal GVAR_RH_ALEXA_TOLDKILLER == 0 >  NODE  4150  (pokud neøekl Julianovi o pomoc a nevysl?chal Alexu- rovnou ji zabil a ona mu nic nevy?vanila, prohledal sklep)
+{507}{}{우가! 머리, 콰쾅! 우와아아아아.} #nejak prisel o rozum.
+
+#NODE 550
+{550}{}{뭘 꾸물거리고 있어?! 그가 도망치기 전에 움직여! 그를 잡아야 한다고!} # Reply < >
+{551}{}{[떠난다.]} # < End >
+
+#NODE 600
+{600}{}{젠장, 그거 정말 대단하군! 이제야 깨달았어! 복수심에 눈이 멀어 그런 가능성은 생각조차 못 했군. 모든 게 정말 고맙네, 자네가 도와줘서 기뻐. 이제 마음이 훨씬 편해졌어. 무기 창고로 가서 들고 갈 수 있는 건 뭐든 챙겨가게. 다 자네 걸세.} # Reply < >
+{601}{}{감사합니다!} # < End > (natalie vypl?c? odm?nu)
+
+#NODE 650
+{650}{}{젠장, 그럼 내가 지난 몇 년 동안 죽은 놈이랑 싸우고 있었단 말인가? 끔찍하군. 알렉사는 정말 지독한 년이었어, 지옥 불에나 떨어지길 빌지. 도와줘서 다시 한번 고맙네. 경비병들에게 무기 창고를 열어두라고 말해뒀네. 거기로 가서 들고 갈 수 있는 건 뭐든 가져가게. 다 자네 걸세.} # Reply < >
+{651}{}{젠장, 그럼 내가 지난 몇 년 동안 죽은 놈이랑 싸우고 있었단 말인가? 끔찍하군. 알렉사는 정말 지독한 년이었어, 그녀 때문에 죽은 모든 사람을 생각하면 지옥 불에나 떨어지길 빌지. 도와줘서 다시 한번 고맙네. 경비병들에게 무기 창고를 열어두라고 말해뒀네. 거기로 가서 들고 갈 수 있는 건 뭐든 가져가게. 다 자네 걸세.} # Reply < >
+{652}{}{감사합니다!} # < End > (natalie vypl?c? odm?nu, pokud zgebla, dostal d Juliana)
+
+#NODE 700
+{700}{}{젠장, 정말 아쉽군! 적어도 그년 알렉사랑 그 일당을 전부 쓸어버릴 수 있었으니 다행이네. 마을 곳곳에 순찰대를 배치하겠어. 어쩌면 아직 그를 잡을 수 있을지도 모르지. 난 복수를 포기하지 않을 거다. 도와줘서 고맙네, 나탈리아가 보상을 줄 걸세.} # Reply < >
+{701}{}{감사합니다!} # < End > (natalie vyplat? odm?nu- pozor, je men?? ne? u zji?t?n? prav?ho vraha, viz natalie.msg)
+
+#NODE 700
+{750}{}{젠장, 정신 좀 차리게! 자네에겐 좀 버거운 일이었나 보군. 허, 허.} # Reply < >
+{751}{}{[떠난다.]} # < End >  KONEC kdyby hr?? pøi?el n?jak v S? o rozum, tøeba abs??kem nebo tak, pojistka.
+
+
