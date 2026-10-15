@@ -1,18 +1,25 @@
 # 리저렉션 새 출력 엔진 설치 참고
 
-**새 출력 엔진 실행 검증 전이다.** 번역 데이터 분리와 패키지 생성만 준비했으며, 리저렉션 EXE용 프로필은 아직 제공하지 않는다. 설치본 확보와 실행 검증 후 엔진 적용 안내를 확정한다.
+기준은 **Resurrection English 1.5 + 한국어 KR1.1**, 공식 sfall 4.5.1이다. 독립 시험본의 확인한 화면에서 사용자가 한글·줄바꿈·배치가 정상이라고 확인했다. 전체 UI나 장시간 플레이를 검증한 것은 아니다.
 
-## 모드와 엔진을 별도 관리
+## 전용 런처 보존
 
-기준 모드: Resurrection English 1.5. 엔진: [공통 출력 모듈](https://github.com/munument1/Fallout2-Korean-Text-Engine). 실행 프로필은 아직 없다.
+[공통 출력 모듈](https://github.com/munument1/Fallout2-Korean-Text-Engine)의 `--profile resurrection`을 **Resurrection 폴더**에 적용한다. `FALLOUT2`는 확장자 없는 실제 게임 파일이며 원본 US 1.02d와 동일하다. `fores.exe`는 게임을 실행하면서 리저렉션 전용 수정을 적용하는 런처다. 런처를 게임 EXE로 오인해 교체하지 않는다. 설치 도구는 검증한 런처와 외부 `f2_res.dll` 해시를 확인하고 두 파일을 그대로 보존한다.
 
-공식 sfall의 DLL은 수정하지 않는다. 공통 엔진은 사용자가 별도로 제공한 CJK EXE·글꼴 DLL에서 런타임을 구성하며, 모드 전용 EXE 변경과 리소스를 보존한다. 지원 EXE 해시는 공통 엔진의 runtime-manifest.json에 한정한다. 검증한 모드와 다른 EXE를 강제로 허용하지 않는다.
+설치 후에도 **`fores.exe`로 실행**한다. 런처의 164개 메모리 쓰기와 한국어 출력 수정은 정적 비교에서 충돌이 없었으며, 실제 게임 프로세스에서 출력 모듈과 CP949 줄바꿈 처리가 적용된 것을 확인했다.
 
-번역 적용은 설치본의 language=korean에 맞춰 data/text/korean을 사용한다. 배경 이야기는 data/premade의 .bio 파일을 포함한다. 원본 모드의 CFG 전체·ddraw.ini 전체·sfall.dat·스크립트를 번역 ZIP으로 덮어쓰지 않는다.
+공식 sfall의 DLL은 수정하지 않는다. 공통 엔진은 사용자가 별도로 제공한 CJK EXE·글꼴 DLL에서 런타임을 구성한다. 허용 파일 해시는 공통 엔진의 runtime-manifest.json에 있다. 한국어 출력 설정은 `fores.cfg`의 `language=korean`과 `translations\korean.ini`를 사용한다.
 
-## 메뉴 표시 설정
+## 고해상도와 메뉴
 
-아래는 검증된 다른 클래식 모드의 참고 설정이며 리저렉션에서 실행 확인하지 않았다. 리저렉션에 자동 적용하지 않는다.
+리저렉션 런처가 기존 외부 고해상도 패치를 불러오므로 설치 도구는 다음 값을 `ddraw.ini`에 설정한다. sfall 내장 고해상도 기능과 중복되는 경고를 피하기 위한 설정이며, 해상도는 바꾸지 않는다.
+
+```ini
+[Main]
+HiResMode=0
+```
+
+메뉴는 `f2_res.ini`에 다음 값을 사용한다.
 
 ```ini
 [MAINMENU]
@@ -21,10 +28,10 @@ USE_HIRES_IMAGES=0
 SCALE_BUTTONS_AND_TEXT_MENU=0
 ```
 
-이 항목은 f2_res.ini에 들어간다. 해상도 자체는 별도로 유지한다. 기존 메뉴 그림을 원래 크기로 표시해 배경만 확대되는 배치 어긋남을 피한다.
+`--keep-menu-settings`는 메뉴 항목만 유지하며 `HiResMode=0`은 적용한다. `fores.cfg`의 DAT·음악 경로, `ddraw.ini`의 시작 맵 등 원본 모드 설정은 유지한다. 번역 ZIP으로 전체 CFG·INI·스크립트·DAT를 덮어쓰지 않는다.
 
-글꼴은 TEXT=Galmuri9 / Size 10 / Weight 400, BUTTON=Galmuri11 / Size 14 / Weight 600을 사용한다. SoftGreen=1, SoftTextColors=1은 차분한 글자색 설정이다.
+글꼴은 TEXT=Galmuri9 / Size 10 / Weight 400, BUTTON=Galmuri11 / Size 14 / Weight 600이다. SoftGreen=1, SoftTextColors=1로 차분한 글자색을 사용한다.
 
-이전 배포물을 되돌리려면 보존된 기존 릴리스를 사용한다. 공통 엔진 설치 도구로 변경한 파일은 해당 도구의 --restore로 복구하며, 사용자가 변경한 파일을 자동 덮어쓰지 않는다.
+번역 ZIP에는 게임에서 읽는 한국어 텍스트만 포함한다. 제공된 KR1.1 ZIP의 활성 번역 텍스트 629개와 저장소의 번역이 같음을 확인했다. 게임 EXE·런처·DLL·원본 모드 데이터는 배포하지 않는다.
 
-클래식 ZIP은 게임에서 읽는 번역 텍스트를 대상으로 하며 SVE 원문 백업 파일과 다른 언어의 Appearance 텍스트는 포함하지 않는다. 해당 원본 파일은 저장소에서 보존한다.
+공통 엔진이 변경한 파일은 `--restore`로 복구할 수 있다. 번역 ZIP으로 적용한 파일은 별도이며, 이전 릴리스·태그는 보존한다.

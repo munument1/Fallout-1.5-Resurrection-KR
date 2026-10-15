@@ -6,7 +6,7 @@
 
 ## 현재 상태
 
-**새 출력 엔진 실행 검증 전이다.** 번역 데이터 분리와 패키지 생성만 준비했으며, 리저렉션 EXE용 프로필은 아직 제공하지 않는다. 설치본 확보와 실행 검증 후 엔진 적용 안내를 확정한다.
+**새 출력 방식의 확인한 화면 검증을 마쳤다.** 공식 영어판 1.5와 한국어 KR1.1로 구성한 독립 시험본에서 사용자가 메뉴·캐릭터 및 확인한 게임 텍스트가 정상이라고 확인했다. 공식 sfall 4.5.1 DLL과 원본 전용 런처를 유지한다. 전체 UI·장시간 플레이 검증을 뜻하지 않는다.
 
 기존 릴리스와 태그는 보존한다. 새 방식은 이 PR의 구성과 GitHub Actions에서 생성한 `korean-classic-data` 산출물을 기준으로 확인한다. 새 방식의 정식 릴리스가 발행됐다고 표시하지 않는다.
 
@@ -14,9 +14,9 @@
 
 1. 위 기준의 원본 모드를 별도 게임 복사본에 설치한다. 원본 모드의 스크립트·설정·DAT를 유지한다.
 2. 공식 sfall 4.5.1을 해당 모드에 준비한다. 기존 한국어 패치의 `ddraw.dll`·`LangFont.ini`를 새 번역 ZIP에서 복사하지 않는다.
-3. [공통 엔진 설치 안내](https://github.com/munument1/Fallout2-Korean-Text-Engine#설치)를 따른다. 리저렉션 프로필은 아직 미검증이라 제공하지 않는다.
-4. 이 저장소의 새 방식 번역 ZIP을 **실제 모드 실행 파일이 있는 폴더**에 적용한다. 에투라면 Fallout1in2 폴더다. 번역 ZIP에는 엔진 DLL·EXE·모드 스크립트·전체 CFG를 넣지 않는다.
-5. `fores.cfg`에서 `[system] language=korean`을 사용한다. 다른 설정은 유지한다.
+3. [공통 엔진 설치 안내](https://github.com/munument1/Fallout2-Korean-Text-Engine#설치)를 따른다. `--profile resurrection`을 사용한다. 확장자 없는 `FALLOUT2`가 실제 게임 파일이고 `fores.exe`는 수정하지 않는다.
+4. 이 저장소의 새 방식 번역 ZIP을 **Resurrection 폴더**에 적용한다. 번역 ZIP에는 엔진 DLL·EXE·모드 스크립트·전체 CFG를 넣지 않는다.
+5. 설치 도구가 `fores.cfg`의 `[system] language=korean`과 `ddraw.ini`의 `[Main] HiResMode=0`을 설정한다. 원래 외부 고해상도 패치를 사용해 중복 경고를 피하며, 나머지 모드 설정은 유지한다. 게임은 기존 **`fores.exe`로 실행**한다.
 
 [모드별 설치와 메뉴 설정](docs/NEW_ENGINE_KO.md).
 

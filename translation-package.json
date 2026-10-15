@@ -3,8 +3,8 @@
   "mod": "리저렉션",
   "baseline": "Resurrection English 1.5",
   "engine_repository": "https://github.com/munument1/Fallout2-Korean-Text-Engine",
-  "engine_profile": null,
-  "engine_validation": "not tested; no executable profile available",
+  "engine_profile": "resurrection",
+  "engine_validation": "user-confirmed selected screens normal; official sfall 4.5.1, unchanged original launcher and external HRP; HiResMode=0",
   "sources": [
     {
       "from": "data",
