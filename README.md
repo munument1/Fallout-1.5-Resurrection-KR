@@ -1,34 +1,24 @@
-# 리저렉션 한국어 번역 — 공통 출력 엔진 방식
+# Fallout 1.5 Resurrection 한국어 번역
 
-기준: **Resurrection English 1.5**. 이번 변경은 기존 번역의 출력 방식 전환이며 원본 모드 버전 업그레이드가 아니다.
+기준: **Resurrection English 1.5**. 게임의 원본 엔진과 구형 sfall, 고해상도 패치 설정을 유지하는 기존 정식 한국어 패치를 권장합니다.
 
-한국어 번역 데이터는 이 저장소에서, 출력 모듈·글꼴·설치 도구는 [Fallout2 Korean Text Engine](https://github.com/munument1/Fallout2-Korean-Text-Engine)에서 관리한다. 한국어로 수정한 sfall `ddraw.dll`을 덮어쓰는 방식에서 공식 sfall과 별도 한국어 모듈을 사용하는 방식으로 전환한다.
+## 권장 버전: Resurrection KR1.1 (기존 정식판)
 
-## 새로운 독립형 출력 엔진 (v1.2.0-beta.2)
+**[Resurrection-V1.5-KR1.1 다운로드](https://github.com/munument1/Fallout-1.5-Resurrection-KR/releases/tag/Resurrection-V1.5-KR1.1)**
 
-기존 번역문의 MSG ID와 본문은 그대로 유지합니다. 이제 게임별 프로필, 중국어 수정 EXE, 중국어 글꼴 DLL을 요구하지 않습니다. [v1.2.0-beta.2 공개 베타 설치기](https://github.com/munument1/Fallout2-Korean-Text-Engine/releases/tag/v1.2.0-beta.2)는 선택한 게임 폴더 안의 호환 Fallout 2 실행 파일을 내부 구조로 자동 인식합니다. 핵심 ABI 자체가 변경된 파일은 무리하게 패치하지 않습니다.
+1. Fallout 2 및 **Resurrection English 1.5 archive 버전**을 준비합니다.
+2. 기존 정식판의 `RES.korean_msg-V1.5-KR1.1.zip`을 Resurrection 실제 게임 폴더(`fores.exe`, `FALLOUT2`, `fores.cfg` 위치)에 적용합니다.
+3. `fores.cfg`의 `[system]`에서 `language=korean`을 설정한 뒤 기존 `fores.exe`로 실행합니다.
 
-**설치 순서가 중요합니다.** 번역 ZIP을 먼저 풀어 한국어 MSG를 배치한 다음 출력 엔진 설치기를 실행하세요. 그래야 설치기가 한국어 텍스트 폴더를 인식해 활성 CFG의 언어를 korean으로 변경합니다. 엔진을 먼저 설치했다면 언어 설정을 직접 확인해야 합니다.
+**새 독립형 Korean-Text Engine 설치기는 적용하지 마세요.** Resurrection은 자체 구형 sfall 및 고해상도 패치 구성에 의존합니다. 새 독립형 엔진의 EXE 섹션 추가가 구형 sfall의 크기 검사에 걸리고, 최신 sfall로 교체하면 고해상도 패치 설정까지 조정해야 합니다. 기존 KR1.1의 파일과 배포 기록은 그대로 유지합니다.
 
-전체 게임을 중복으로 백업하지 않습니다. EXE가 수정되므로 원상복구에 필요한 원본 파일 한 벌만 설치기가 보관합니다. 긴 대화, 전투, 모든 저장 및 불러오기를 완전히 검증한 정식판은 아직 아닙니다.
+## 독립형 출력 엔진 beta.2 (이전 실험 기록)
 
-## 현재 상태
+[2026년 10월 17일 native beta.2 번역 데이터 릴리즈](https://github.com/munument1/Fallout-1.5-Resurrection-KR/releases/tag/v2026.10.17-native-beta.2)는 **번역문 데이터만** 담고 있으며, 별도의 독립형 실행 파일 수정 설치기를 필요로 합니다. 번역 MSG 629개는 기존 beta.1과 동일하지만 정식 KR1.1의 완성형 설치 자료를 대체하지 않습니다.
 
-**새 출력 방식의 확인한 화면 검증을 마쳤다.** 공식 영어판 1.5와 한국어 KR1.1로 구성한 독립 시험본에서 사용자가 메뉴·캐릭터 및 확인한 게임 텍스트가 정상이라고 확인했다. 공식 sfall 4.5.1 DLL과 원본 전용 런처를 유지한다. 전체 UI·장시간 플레이 검증을 뜻하지 않는다.
+당시 시험에서는 원본 `fores.exe` 런처는 유지하고 확장자 없는 `FALLOUT2`를 패치했습니다. 기존 sfall 3.7.4에서는 실행 파일 크기 오류가 발생했고, sfall 4.5.1과 `HiResMode=0` 설정에서 짧은 게임 창 실행만 확인했습니다. 전체 대화·전투·저장·불러오기 호환성은 확인되지 않아 새 방식은 현재 권장하지 않습니다. 베타 자료는 이전 연구 및 비교용으로 보존합니다.
 
-기존 릴리스와 태그는 보존한다. 새 방식은 이 PR의 구성과 GitHub Actions에서 생성한 `korean-classic-data` 산출물을 기준으로 확인한다. 새 방식의 정식 릴리스가 발행됐다고 표시하지 않는다.
-
-## 설치
-
-1. 번역 버전과 일치하는 원본 모드를 준비합니다. 대상 위치는 **fores.exe, FALLOUT2, fores.cfg가 있는 Resurrection 1.5 실제 게임 폴더**입니다.
-2. 번역 ZIP을 **먼저** 적용합니다. GitHub Actions의 korean-classic-data 산출물을 받거나 아래 빌드 명령으로 생성한 ZIP을 게임 폴더에 풀어 data/text/korean 등을 추가합니다. 번역 ZIP에는 게임 EXE, sfall DLL, DAT, INT가 들어가지 않습니다.
-3. [v1.2.0-beta.2 독립형 설치기](https://github.com/munument1/Fallout2-Korean-Text-Engine/releases/tag/v1.2.0-beta.2)의 Fallout2-Korean-Native-Setup.exe를 실행하고 게임 폴더만 지정합니다. 게임 종류나 --profile 선택, 중국어 CJK EXE 및 DLL은 필요 없습니다.
-4. 구조 검사 성공 시 설치합니다. 모드 기존 실행기와 sfall 설정을 유지하며, 설치된 번역 MSG가 있다면 **fores.cfg**의 language=korean을 확인합니다.
-5. 게임을 실행해 한글 표시와 대화, 메뉴, 저장/불러오기를 확인하세요. 되돌릴 때는 같은 설치기의 복구 기능을 사용합니다.
-
-**모드별 주의:** 확장자 없는 FALLOUT2가 실제 Watcom 게임 엔진이고 fores.exe는 전용 런처입니다. beta.2는 엔진 파일의 내부 구조만 검사해 패치하며 fores.exe를 변경하지 않습니다. 모드 동봉 구형 sfall 3.7.4는 확장된 EXE 크기를 거부합니다. 기존 ddraw.dll을 별도로 보관하고 검증된 공식 sfall 4.5.1을 수동 적용해야 합니다. 내장/외부 고해상도 충돌 방지를 위해 ddraw.ini의 [Main] HiResMode=0도 필요합니다. 설치기는 sfall DLL을 자동 교체하지 않습니다. 별도 시험본은 짧은 게임 창 진입까지 확인됐지만 모든 대화·전투·저장/불러오기는 미검증입니다.
-
-[자세한 안내](docs/NEW_ENGINE_KO.md) · [구형 설치 방식 기록](docs/LEGACY_INSTALLATION_KO.md)
+[과거 설치 방식 기록](docs/LEGACY_INSTALLATION_KO.md) · [독립형 엔진 기술 기록](docs/NEW_ENGINE_KO.md)
 
 ## 번역 파일과 패키지
 
