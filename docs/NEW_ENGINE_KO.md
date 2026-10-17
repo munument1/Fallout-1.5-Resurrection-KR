@@ -1,37 +1,29 @@
-# 리저렉션 새 출력 엔진 설치 참고
+# Resurrection English 1.5 독립형 한국어 텍스트 엔진 설치 안내
 
-기준은 **Resurrection English 1.5 + 한국어 KR1.1**, 공식 sfall 4.5.1이다. 독립 시험본의 확인한 화면에서 사용자가 한글·줄바꿈·배치가 정상이라고 확인했다. 전체 UI나 장시간 플레이를 검증한 것은 아니다.
+이 안내는 v1.2.0-beta.1 공개 베타 이후의 방법입니다. 기존 게임별 --profile 방식과 중국어 수정 EXE/DLL 입력은 필요하지 않습니다.
 
-## 전용 런처 보존
+## 설치 순서
 
-[공통 출력 모듈](https://github.com/munument1/Fallout2-Korean-Text-Engine)의 `--profile resurrection`을 **Resurrection 폴더**에 적용한다. `FALLOUT2`는 확장자 없는 실제 게임 파일이며 원본 US 1.02d와 동일하다. `fores.exe`는 게임을 실행하면서 리저렉션 전용 수정을 적용하는 런처다. 런처를 게임 EXE로 오인해 교체하지 않는다. 설치 도구는 검증한 런처와 외부 `f2_res.dll` 해시를 확인하고 두 파일을 그대로 보존한다.
+1. 대상 모드와 번역 ZIP의 기준 버전을 일치시킵니다. 게임 위치는 **Resurrection 게임 폴더**입니다.
+2. **먼저** 번역 데이터 ZIP을 게임 실행 폴더에 적용해 data/text/korean 등의 파일을 배치합니다. ZIP에 엔진 바이너리나 게임 원본 EXE, DAT, INT가 없어야 합니다.
+3. [v1.2.0-beta.1 설치기](https://github.com/munument1/Fallout2-Korean-Text-Engine/releases/tag/v1.2.0-beta.1)에서 Fallout2-Korean-Native-Setup.exe를 실행하고 폴더 하나만 고릅니다. 호환 EXE 전체를 Watcom ABI 구조로 검사하며 게임 종류는 선택하지 않습니다.
+4. 설치 후 **fallout2.cfg**의 language=korean을 확인합니다. 한국어 MSG가 없으면 언어를 강제로 바꾸지 않습니다.
+5. 게임 원래 실행 방법으로 구동하고 메뉴, 대화, 줄바꿈, 전투, 저장/불러오기를 점검합니다.
 
-설치 후에도 **`fores.exe`로 실행**한다. 런처의 164개 메모리 쓰기와 한국어 출력 수정은 정적 비교에서 충돌이 없었으며, 실제 게임 프로세스에서 출력 모듈과 CP949 줄바꿈 처리가 적용된 것을 확인했다.
+## 모드 전용 제한
 
-공식 sfall의 DLL은 수정하지 않는다. 공통 엔진은 사용자가 별도로 제공한 CJK EXE·글꼴 DLL에서 런타임을 구성한다. 허용 파일 해시는 공통 엔진의 runtime-manifest.json에 있다. 한국어 출력 설정은 `fores.cfg`의 `language=korean`과 `translations\korean.ini`를 사용한다.
+동봉된 구형 sfall 3.2a는 패치된 EXE 크기를 거부합니다. 확인된 게임 구성에서는 기존 DLL을 별도로 보존하고 호환되는 공식 sfall 4.5.1로 수동 교체했습니다. 엔진 설치기는 sfall을 자동 교체하지 않습니다. fores.exe 및 확장자 없는 FALLOUT2를 쓰는 이전 런처 구조는 별도 호환 검증이 필요하며, 런처 자체를 임의로 수정하면 안 됩니다.
 
-## 고해상도와 메뉴
+## 파일 보존과 복구
 
-리저렉션 런처가 기존 외부 고해상도 패치를 불러오므로 설치 도구는 다음 값을 `ddraw.ini`에 설정한다. sfall 내장 고해상도 기능과 중복되는 경고를 피하기 위한 설정이며, 해상도는 바꾸지 않는다.
+- 번역 ZIP은 게임 스크립트, EXE, sfall DLL 및 전체 CFG를 덮어쓰지 않습니다.
+- 기존 모드에 포함된 sfall을 버전 확인 없이 일반 최신판으로 교체하지 않습니다. 독립형 엔진은 기존 DLL을 유지하고 필요한 ExtraCRC만 설정에 추가합니다.
+- 설치기는 전체 게임을 복제하지 않고 수정 대상 원본 파일만 korean_engine_backup_v2에 저장합니다. 바이너리 EXE를 변경하므로 최소 원본 파일 복구 기록은 유지합니다.
+- 사용자가 별도로 교체한 sfall DLL은 엔진 자체의 --restore로 돌아오지 않습니다. 그런 변경은 별도의 원본 DLL 보관이 필요합니다.
+- 기존 번역 내용과 CP949 텍스트는 다시 번역하거나 일괄 치환하지 않습니다. UTF-8로 저장된 일부 파일은 ZIP 빌드 시 손실 없는 CP949 변환을 수행합니다.
 
-```ini
-[Main]
-HiResMode=0
-```
+## 검증 단계
 
-메뉴는 `f2_res.ini`에 다음 값을 사용한다.
+실행 파일 구조, 짧은 기동, 기본 한국어 렌더링, SHA-256 기반 복구를 확인했습니다. 모든 모드 버전의 전체 스크립트, 긴 대화, 전투와 저장/불러오기를 전수 검증한 것은 아닙니다.
 
-```ini
-[MAINMENU]
-MAIN_MENU_SIZE=0
-USE_HIRES_IMAGES=0
-SCALE_BUTTONS_AND_TEXT_MENU=0
-```
-
-`--keep-menu-settings`는 메뉴 항목만 유지하며 `HiResMode=0`은 적용한다. `fores.cfg`의 DAT·음악 경로, `ddraw.ini`의 시작 맵 등 원본 모드 설정은 유지한다. 번역 ZIP으로 전체 CFG·INI·스크립트·DAT를 덮어쓰지 않는다.
-
-글꼴은 TEXT=Galmuri9 / Size 10 / Weight 400, BUTTON=Galmuri11 / Size 14 / Weight 600이다. SoftGreen=1, SoftTextColors=1로 차분한 글자색을 사용한다.
-
-번역 ZIP에는 게임에서 읽는 한국어 텍스트만 포함한다. 제공된 KR1.1 ZIP의 활성 번역 텍스트 629개와 저장소의 번역이 같음을 확인했다. 게임 EXE·런처·DLL·원본 모드 데이터는 배포하지 않는다.
-
-공통 엔진이 변경한 파일은 `--restore`로 복구할 수 있다. 번역 ZIP으로 적용한 파일은 별도이며, 이전 릴리스·태그는 보존한다.
+[구형 설치 방식 보관본](LEGACY_INSTALLATION_KO.md)
