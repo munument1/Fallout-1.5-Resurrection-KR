@@ -4,9 +4,9 @@
 
 한국어 번역 데이터는 이 저장소에서, 출력 모듈·글꼴·설치 도구는 [Fallout2 Korean Text Engine](https://github.com/munument1/Fallout2-Korean-Text-Engine)에서 관리한다. 한국어로 수정한 sfall `ddraw.dll`을 덮어쓰는 방식에서 공식 sfall과 별도 한국어 모듈을 사용하는 방식으로 전환한다.
 
-## 새로운 독립형 출력 엔진 (v1.2.0-beta.1)
+## 새로운 독립형 출력 엔진 (v1.2.0-beta.2)
 
-기존 번역문의 MSG ID와 본문은 그대로 유지합니다. 이제 게임별 프로필, 중국어 수정 EXE, 중국어 글꼴 DLL을 요구하지 않습니다. [v1.2.0-beta.1 공개 베타 설치기](https://github.com/munument1/Fallout2-Korean-Text-Engine/releases/tag/v1.2.0-beta.1)는 선택한 게임 폴더 안의 호환 Fallout 2 실행 파일을 내부 구조로 자동 인식합니다. 핵심 ABI 자체가 변경된 파일은 무리하게 패치하지 않습니다.
+기존 번역문의 MSG ID와 본문은 그대로 유지합니다. 이제 게임별 프로필, 중국어 수정 EXE, 중국어 글꼴 DLL을 요구하지 않습니다. [v1.2.0-beta.2 공개 베타 설치기](https://github.com/munument1/Fallout2-Korean-Text-Engine/releases/tag/v1.2.0-beta.2)는 선택한 게임 폴더 안의 호환 Fallout 2 실행 파일을 내부 구조로 자동 인식합니다. 핵심 ABI 자체가 변경된 파일은 무리하게 패치하지 않습니다.
 
 **설치 순서가 중요합니다.** 번역 ZIP을 먼저 풀어 한국어 MSG를 배치한 다음 출력 엔진 설치기를 실행하세요. 그래야 설치기가 한국어 텍스트 폴더를 인식해 활성 CFG의 언어를 korean으로 변경합니다. 엔진을 먼저 설치했다면 언어 설정을 직접 확인해야 합니다.
 
@@ -20,13 +20,13 @@
 
 ## 설치
 
-1. 번역 버전과 일치하는 원본 모드를 준비합니다. 대상 위치는 **Resurrection 게임 폴더**입니다.
+1. 번역 버전과 일치하는 원본 모드를 준비합니다. 대상 위치는 **fores.exe, FALLOUT2, fores.cfg가 있는 Resurrection 1.5 실제 게임 폴더**입니다.
 2. 번역 ZIP을 **먼저** 적용합니다. GitHub Actions의 korean-classic-data 산출물을 받거나 아래 빌드 명령으로 생성한 ZIP을 게임 폴더에 풀어 data/text/korean 등을 추가합니다. 번역 ZIP에는 게임 EXE, sfall DLL, DAT, INT가 들어가지 않습니다.
-3. [v1.2.0-beta.1 독립형 설치기](https://github.com/munument1/Fallout2-Korean-Text-Engine/releases/tag/v1.2.0-beta.1)의 Fallout2-Korean-Native-Setup.exe를 실행하고 게임 폴더만 지정합니다. 게임 종류나 --profile 선택, 중국어 CJK EXE 및 DLL은 필요 없습니다.
-4. 구조 검사 성공 시 설치합니다. 모드 기존 실행기와 sfall 설정을 유지하며, 설치된 번역 MSG가 있다면 **fallout2.cfg**의 language=korean을 확인합니다.
+3. [v1.2.0-beta.2 독립형 설치기](https://github.com/munument1/Fallout2-Korean-Text-Engine/releases/tag/v1.2.0-beta.2)의 Fallout2-Korean-Native-Setup.exe를 실행하고 게임 폴더만 지정합니다. 게임 종류나 --profile 선택, 중국어 CJK EXE 및 DLL은 필요 없습니다.
+4. 구조 검사 성공 시 설치합니다. 모드 기존 실행기와 sfall 설정을 유지하며, 설치된 번역 MSG가 있다면 **fores.cfg**의 language=korean을 확인합니다.
 5. 게임을 실행해 한글 표시와 대화, 메뉴, 저장/불러오기를 확인하세요. 되돌릴 때는 같은 설치기의 복구 기능을 사용합니다.
 
-**모드별 주의:** 동봉된 구형 sfall 3.2a는 패치된 EXE 크기를 거부합니다. 확인된 게임 구성에서는 기존 DLL을 별도로 보존하고 호환되는 공식 sfall 4.5.1로 수동 교체했습니다. 엔진 설치기는 sfall을 자동 교체하지 않습니다. fores.exe 및 확장자 없는 FALLOUT2를 쓰는 이전 런처 구조는 별도 호환 검증이 필요하며, 런처 자체를 임의로 수정하면 안 됩니다.
+**모드별 주의:** 확장자 없는 FALLOUT2가 실제 Watcom 게임 엔진이고 fores.exe는 전용 런처입니다. beta.2는 엔진 파일의 내부 구조만 검사해 패치하며 fores.exe를 변경하지 않습니다. 모드 동봉 구형 sfall 3.7.4는 확장된 EXE 크기를 거부합니다. 기존 ddraw.dll을 별도로 보관하고 검증된 공식 sfall 4.5.1을 수동 적용해야 합니다. 내장/외부 고해상도 충돌 방지를 위해 ddraw.ini의 [Main] HiResMode=0도 필요합니다. 설치기는 sfall DLL을 자동 교체하지 않습니다. 별도 시험본은 짧은 게임 창 진입까지 확인됐지만 모든 대화·전투·저장/불러오기는 미검증입니다.
 
 [자세한 안내](docs/NEW_ENGINE_KO.md) · [구형 설치 방식 기록](docs/LEGACY_INSTALLATION_KO.md)
 

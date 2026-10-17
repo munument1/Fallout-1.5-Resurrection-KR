@@ -1,18 +1,18 @@
 # Resurrection English 1.5 독립형 한국어 텍스트 엔진 설치 안내
 
-이 안내는 v1.2.0-beta.1 공개 베타 이후의 방법입니다. 기존 게임별 --profile 방식과 중국어 수정 EXE/DLL 입력은 필요하지 않습니다.
+이 안내는 v1.2.0-beta.2 공개 베타 이후의 방법입니다. 기존 게임별 --profile 방식과 중국어 수정 EXE/DLL 입력은 필요하지 않습니다.
 
 ## 설치 순서
 
-1. 대상 모드와 번역 ZIP의 기준 버전을 일치시킵니다. 게임 위치는 **Resurrection 게임 폴더**입니다.
+1. 대상 모드와 번역 ZIP의 기준 버전을 일치시킵니다. 게임 위치는 **fores.exe, FALLOUT2, fores.cfg가 있는 Resurrection 1.5 실제 게임 폴더**입니다.
 2. **먼저** 번역 데이터 ZIP을 게임 실행 폴더에 적용해 data/text/korean 등의 파일을 배치합니다. ZIP에 엔진 바이너리나 게임 원본 EXE, DAT, INT가 없어야 합니다.
-3. [v1.2.0-beta.1 설치기](https://github.com/munument1/Fallout2-Korean-Text-Engine/releases/tag/v1.2.0-beta.1)에서 Fallout2-Korean-Native-Setup.exe를 실행하고 폴더 하나만 고릅니다. 호환 EXE 전체를 Watcom ABI 구조로 검사하며 게임 종류는 선택하지 않습니다.
-4. 설치 후 **fallout2.cfg**의 language=korean을 확인합니다. 한국어 MSG가 없으면 언어를 강제로 바꾸지 않습니다.
+3. [v1.2.0-beta.2 설치기](https://github.com/munument1/Fallout2-Korean-Text-Engine/releases/tag/v1.2.0-beta.2)에서 Fallout2-Korean-Native-Setup.exe를 실행하고 폴더 하나만 고릅니다. 호환 EXE 전체를 Watcom ABI 구조로 검사하며 게임 종류는 선택하지 않습니다.
+4. 설치 후 **fores.cfg**의 language=korean을 확인합니다. 한국어 MSG가 없으면 언어를 강제로 바꾸지 않습니다.
 5. 게임 원래 실행 방법으로 구동하고 메뉴, 대화, 줄바꿈, 전투, 저장/불러오기를 점검합니다.
 
 ## 모드 전용 제한
 
-동봉된 구형 sfall 3.2a는 패치된 EXE 크기를 거부합니다. 확인된 게임 구성에서는 기존 DLL을 별도로 보존하고 호환되는 공식 sfall 4.5.1로 수동 교체했습니다. 엔진 설치기는 sfall을 자동 교체하지 않습니다. fores.exe 및 확장자 없는 FALLOUT2를 쓰는 이전 런처 구조는 별도 호환 검증이 필요하며, 런처 자체를 임의로 수정하면 안 됩니다.
+**모드별 주의:** 확장자 없는 FALLOUT2가 실제 Watcom 게임 엔진이고 fores.exe는 전용 런처입니다. beta.2는 엔진 파일의 내부 구조만 검사해 패치하며 fores.exe를 변경하지 않습니다. 모드 동봉 구형 sfall 3.7.4는 확장된 EXE 크기를 거부합니다. 기존 ddraw.dll을 별도로 보관하고 검증된 공식 sfall 4.5.1을 수동 적용해야 합니다. 내장/외부 고해상도 충돌 방지를 위해 ddraw.ini의 [Main] HiResMode=0도 필요합니다. 설치기는 sfall DLL을 자동 교체하지 않습니다. 별도 시험본은 짧은 게임 창 진입까지 확인됐지만 모든 대화·전투·저장/불러오기는 미검증입니다.
 
 ## 파일 보존과 복구
 
